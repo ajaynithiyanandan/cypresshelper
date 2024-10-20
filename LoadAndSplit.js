@@ -16,6 +16,10 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 import { PromptTemplate } from "@langchain/core/prompts";
 import readline from 'readline';
+import fs from 'fs';
+
+const keys = JSON.parse(fs.readFileSync('keys.json', 'utf8'));
+const OPENAI_API_KEY = keys.openaikey;
 
 const sourceDocs = "cypress-documentation/docs"
   
@@ -54,7 +58,7 @@ const sourceDocs = "cypress-documentation/docs"
 
   const embeddings = new OpenAIEmbeddings({
     model: "text-embedding-3-large",
-    openAIApiKey: "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"
+    openAIApiKey: OPENAI_API_KEY
   });
 
   const vectorStore = new Chroma(embeddings, {

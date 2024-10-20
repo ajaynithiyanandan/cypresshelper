@@ -8,8 +8,10 @@ import { OpenAIEmbeddings } from "@langchain/openai";
 import { Chroma } from "@langchain/community/vectorstores/chroma";
 import { ConversationalRetrievalQAChain } from "langchain/chains";
 import { ChromaClient } from "chromadb";
+import fs from 'fs';
 
-const OPENAI_API_KEY = "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";
+const keys = JSON.parse(fs.readFileSync('keys.json', 'utf8'));
+const OPENAI_API_KEY = keys.openaikey;
 
 async function loadDocuments() {
   const loader = new DirectoryLoader(
