@@ -79,7 +79,7 @@ const sourceDocs = "cypress-documentation/docs"
 const llm = new ChatOpenAI({ 
   model: "gpt-4o",
   temperature: 0,
-  openAIApiKey: "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"
+  openAIApiKey: OPENAI_API_KEY
 });
 // Retrieve and generate using the relevant snippets of the blog.
 const vectorStoreRetriever = vectorStore.asRetriever();
