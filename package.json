@@ -1,0 +1,23 @@
+{
+  "name": "cypresshelper",
+  "version": "1.0.0",
+  "description": "This package will analyze the Cypress documentation and provide detailed explanation on any questions from user on Cypress",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.5",
+    "@langchain/core": "^0.3.10",
+    "@langchain/openai": "^0.3.0",
+    "@langchain/textsplitters": "^0.1.0",
+    "cheerio": "^1.0.0",
+    "chromadb": "^1.9.2",
+    "chromadb-default-embed": "^2.13.2",
+    "langchain": "^0.3.2",
+    "readline": "^1.3.0"
+  }
+}
